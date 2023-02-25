@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:ital,wght@0,800;1,300&family=Poppins:wght@700&family=Source+Code+Pro:wght@300&display=swap');
+
+.led__bg {
+    background-color: #7fd2ed;
+}
+
+.led__whyUs {
+    display: flex;
+    flex-direction: column;
+}
+
+.led__whyUs_content {
+    display: flex;
+    flex-direction: row;
+}
+
+.led__whyUs_content-left {
+    width: 50%;
+}
+
+.led__whyUs_content-right {
+    width: 50%;
+}
+
+.led__whyUs_header {
+    font-size: 50px;
+    padding-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    color: #072D37;
+    /* Text-decoration: underline */
+    /* font-size: 128px; */
+}
+
+.features {
+    flex-basis: 50%;
+}
+
+.features-img {
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.features-img img {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.features h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100px;
+    color: #142961;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.icon {
+    color: #0b562e;
+}
+
+.feature-description {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    color: #0b562e;
+    font-family: 'Fira Code', monospace;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    /* font-style: italic; */
+    font-weight: bolder;
+    font-size: 18px;
+
+}
+
+.feature-icon {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    /* border: 1px solid rgb(0, 0, 0) */
+}
+
+.feature-text {
+    padding: 2px 2px;
+    text-align: initial;
+}
