@@ -15,7 +15,6 @@
     <br />
     <a href="https://github.com/arnab2001/Ledged"><strong>docs »</strong></a>
     <br />
-
     <br />
     <a href="#"> Blog </a>
     .
@@ -26,6 +25,7 @@
     <a href="https://github.com/arnab2001/ledged/issues">Request Feature</a>
   </p>
 </div>
+
 
 
 
@@ -59,29 +59,15 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-### Screenshots
-<div align="center">
-
-![pg12 png](https://user-images.githubusercontent.com/63441472/190886473-d047ad42-00d4-4f1a-82f9-fb357e3c14d9.jpg)
-
-
-https://user-images.githubusercontent.com/63441472/221375913-a4395e15-231b-4e08-b4d4-eeff78a26482.mp4
-
 
 https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-8f20-27afd96658d1.mp4
 
 
 
-</div>
-
-
 ### Inspiration:
 - Currently, the ticketing system can't help people reflect on special moments from past events. Hence, NFTs have arrived to make tickets more functional and easy to collect for memories. 
-- A tradition-based ticket may be lost or destroyed. 
-- Organizers do not get enough security with paper-based tickets thus they can be easily faked.
-- With NFTs, you don't need to compromise anymore and the technology benefits both the organizers and users.
 
-### What it does:
+### What problem does the project solve?
 - Empowers Community Driven tourism
 - In The landing Page user will be able to see **upcoming events, features of our DAPP and contact us section**.
 - To join an event, user need to sign-in using **Arcana Auth**.
@@ -107,16 +93,14 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 ### Built With
 
 
-
 - <img src = "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" style="margin-top: 40px" height=30px width=30px > **React** - for building the frontend UI <br> 
 - <img src = "https://user-images.githubusercontent.com/63441472/190888196-9164551f-eb48-4da6-ab91-db17adad7c73.svg" height=30px width=30px>**Vite** - as Module bundler instead of webpack <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/190888540-0feb2866-f3b8-4094-b17f-4e04e16d2b38.jpg" height=40px width=40px > **Lighthouse**-   as __IPFS__ Storage <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/190889964-7760f99e-a7c7-4b28-bf44-a1659f7d8b76.png" height=30px width=80px> **Arcana**- for Authentication and storage <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/190890398-30a54b65-1e50-46f8-a862-2a929c389fb4.png" height=40px width=40px > **Thirdweb** - for Minting NFTs and providing with a marketplace <br>
+- <img src = "https://user-images.githubusercontent.com/63441472/221376795-45668137-c096-470e-b288-ea98f1728e94.png" height=40px width=40px > **Etherium**-  as ...... <br>
+- <img src = "https://user-images.githubusercontent.com/63441472/221376691-706e8087-7ba9-45be-9d60-583b0fdf518d.png" height=40px width=40px> **Solidity**- for writing smart contract <br>
+- <img src = "https://user-images.githubusercontent.com/63441472/221376973-6ecb124f-12b4-429f-86ac-96afe68d258c.png" height=40px width=40px > **5ire** - .............. <br>
+- <img src = "https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height=40px width=40px> **Filecoin**- as IPFS<br>
 - <img src = "https://user-images.githubusercontent.com/63441472/190890501-54045447-d458-4413-a1fa-91a4216bfb44.svg" height=40px width=80px> -  Build on Top of **Polygon** chain <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/190896166-4c7b9317-173f-47d7-9b5c-d19c77cf994c.svg" height=40px width=80px> - Deployed in **Spheron**
-
-
+- <img src = "https://user-images.githubusercontent.com/63441472/221377636-a1f30ce1-9e6b-4e6d-8efd-b9d3e0bc82e2.png" height=40px width=40px> - Deployed in **Digital Ocean**
 
 
 
@@ -143,13 +127,19 @@ _How to setup this project_
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/IRSHIT033/Hype-The-Hike.git
+   git clone https://github.com/arnab2001/Ledged.git
    ```
 3. Install all the NPM packages
    ```sh
    npm install
    ```
-4. Create a wallet.json file and add your public and private key
+4. configure `.env` and add
+   ```env
+   DB_CONNECT = 'mongodb+srv://arnab0321:bH1Ttke9EZBmYClg@cluster0.dehf4yw.mongodb.net/?retryWrites=true&w=majority'
+   ```
+   
+   
+6. Create a wallet.json file and add your public and private key
    ```json
    {
     "privateKey": "<private_key>",
