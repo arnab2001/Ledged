@@ -1,0 +1,128 @@
+.led__pastLedger {
+    display: flex;
+    flex-direction: row;
+}
+
+.led__pastLedger__left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* position: fixed; */
+}
+
+.led__pastLedger__right {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    background-color: #4c98b0;
+    height: auto;
+    min-height: 100vh;
+
+}
+
+.led__pastLedger_logo {
+    position: fixed;
+    top: 3rem;
+}
+
+.led__pastLedger_logo img {
+    width: 140px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #072D37;
+}
+
+.led__pastLedger_username {
+    position: fixed;
+    top: 13rem;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    color: #072D37;
+}
+
+.led__pastLedger_animation {
+    position: fixed;
+    top: 15rem;
+
+}
+
+.led__pastLedger-feed {
+    margin-top: 40px;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    min-height: 5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+}
+
+.led__pastLedger-feed-no {
+    width: 30%;
+    height: 100%;
+    /* font-weight: 200; */
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #072D37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    border-radius: 20px 0 0 20px;
+    color: #15CD96;
+}
+
+.led__pastLedger-feed-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    padding: 20px 30px;
+}
+
+.led__pastLedger-feed-content-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.led__pastLedger-feed-content-info p {
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Fira Code', monospace;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    /* width: 37.5%; */
+    color: black;
+    font-weight: bolder;
+    padding-top: 10px;
+}
+
+.led__pastLedger-feed-content-show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.led__pastLedger-feed-content-show button {
+    background-color: transparent;
+    border-width: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #072D37;
+    cursor: pointer;
+}
+
+.led__pastLedger-feed-content-show button:hover {
+
+    color: #0cba8c;
+}
