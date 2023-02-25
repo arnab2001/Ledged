@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+a {
+    color: unset;
+    text-decoration: none;
+    color: #072D37;
+}
+
+.led {
+    position: sticky;
+    background-color: #CBE1E8;
+    top: 0;
+}
+
+.active {
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.45);
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.led__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 6rem;
+}
+
+.led__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.led__navbar-links_logo {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+}
+
+.led__navbar-links_logo img {
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+}
+
+.led__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.led__navbar-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.led__navbar-links_container p,
+.led__navbar-sign p {
+    color: #072D37;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #0a5a6e;
+    font-size: 25px;
+}
+
+
+.led__navbar-sign button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #072D37;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
