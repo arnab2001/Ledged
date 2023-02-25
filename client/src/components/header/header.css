@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:ital,wght@0,800;1,300&family=Poppins:wght@200;700&family=Source+Code+Pro:wght@300&family=Ubuntu:wght@300&display=swap');
+
+.led__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.gradient__text-fade {
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.gradient__text {
+
+
+    animation: strokeEffect 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+
+@keyframes strokeEffect {
+    0% {
+
+
+        background: #072D37;
+        background: linear-gradient(to right, #072D37 0%, #375E68 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-color: #072D37;
+
+    }
+
+    100% {
+
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #072D37;
+        color: #CBE1E8;
+
+    }
+}
+
+
+.gradient__para {
+    animation: fadeLeft 2s;
+    font-family: monospace;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.led__header-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    /* margin-right: 5rem; */
+}
+
+.led__header-content h1 {
+
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 128px;
+    text-align: center;
+    letter-spacing: 0.23em;
+
+}
+
+.led__header-content p {
+    font-family: 'Fira Code', monospace;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 28px;
+    color: #072D37;
+    width: 40%;
+    font-style: normal;
+    margin-top: 0.5rem;
+}
+
+.led__header-content__input {
+    width: 70%;
+    margin: 2rem 0 1rem;
+
+    display: flex;
+    flex-direction: row;
+    animation: fadeLeft 2s;
+}
+
+
+
+.led__header-content__input button {
+    flex: 0.6;
+    width: 50px;
+    min-height: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    background: #15CD96;
+    border: 2px solid #15CD96;
+    padding: 0px;
+    color: #072D37;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+
+.led__header-image {
+    /* flex: 1; */
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    animation: fadeLeft 2s;
+    width: 60%;
+}
+
+/* 
+.led__header-content__people {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    margin-top: 2rem;
+}
+
+.led__header-content__people img {
+    width: 181.79px;
+    height: 38px;
+}
+
+.led__header-content__people p {
+    margin: 0 0 0 1rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 38px;
+    color: #fff;
+    text-align: center;
+} */
