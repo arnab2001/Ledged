@@ -9,10 +9,11 @@ import { useNavigate } from "react-router-dom";
 import { Web3ApiContext } from "../../context/Web3Context";
 const Avatar = () => {
   const navigate = useNavigate();
-  const { connectedAccount, checkIfWalletIsConnected } =
+  const { connectedAccount, checkIfWalletIsConnected, Get_ledgerdata } =
     useContext(Web3ApiContext);
   console.log(connectedAccount);
-  const goTo_createLedger = () => {
+  const goTo_createLedger = async () => {
+    await Get_ledgerdata();
     navigate("/create-ledger");
   };
   const goTo_pastLedger = () => {

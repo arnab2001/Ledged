@@ -4,7 +4,10 @@ import { FaTrashAlt } from "react-icons/fa";
 import { LedNav, Footer } from "../../components";
 import { Web3ApiContext } from "../../context/Web3Context";
 import { main } from "../../Util/web3Storage";
+import { useNavigate } from "react-router-dom";
 const Ledger = () => {
+  const navigate = useNavigate();
+  const [loading, SetLoading] = useState(false);
   const [file, setFile] = useState();
   const [workspace, SetworkSpace] = useState({ field_name: "", value: "" });
   const [preview, setPreview] = useState([]);
@@ -15,14 +18,11 @@ const Ledger = () => {
   const Deploy_ledger_data = async (e) => {
     try {
       e.preventDefault();
-
       await Send_ledgerdata(preview);
     } catch (err) {
       console.log(err);
     }
   };
-
-  const handleupload_Filecoin = async () => {};
 
   const delete_preview = (idx) => {
     const newPreview_data = preview.filter((d, i) => {
@@ -89,8 +89,10 @@ const Ledger = () => {
                 id="formFileMultiple"
                 name="file"
                 onChange={async (e) => {
+                  SetLoading(true);
                   const cid = await main(e.target.files);
                   SetworkSpace({ ...workspace, value: cid });
+                  SetLoading(false);
                 }}
               />
             ) : (
@@ -105,14 +107,18 @@ const Ledger = () => {
           </div>
 
           <div className="workspace__button">
-            <button
-              onClick={() => {
-                SetworkSpace({ field_name: "", value: "" });
-                setPreview([...preview, workspace]);
-              }}
-            >
-              Add
-            </button>
+            {!loading ? (
+              <button
+                onClick={() => {
+                  SetworkSpace({ field_name: "", value: "" });
+                  setPreview([...preview, workspace]);
+                }}
+              >
+                Add
+              </button>
+            ) : (
+              <h1 className="section__padding">{"loading..."}</h1>
+            )}
           </div>
         </div>
 
@@ -125,7 +131,11 @@ const Ledger = () => {
 
                 <div className="led__preview-colon">:</div>
 
-                <div className="led__preview-value">{p.value}</div>
+                <div className="led__preview-value">
+                  {p.value?.length > 20
+                    ? p.value?.slice(0, 6) + "..."
+                    : p.value}
+                </div>
 
                 <div className="led__preview-delete">
                   <FaTrashAlt onClick={() => delete_preview(idx)} />
