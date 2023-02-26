@@ -95,14 +95,14 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 - The previously created ledgers can be viewed under Previous Ledgers page.
 
 ### 💀 Challenges we ran into:
-  - **ThirdWeb** is not compatible with Webpack so we had to migrate our codebase in middle of the hackathon.
-  - **Arcana's SDKs** and **ThirdWeb SDK** were not build for production so we had to face a lot of bugs.
-  -  We had trouble adding metadatas to NFT.
+  - Since blockchain is fairly new technology , we were finding it difficult to get solutions of out bugs due to smaller community.
+  - In the solidity file , i was using a struct of my own , but due to lack of resources , we faced problems initially.
+  - A very recent and major update of **Ether JS** made it very confusing , and we had to go through a lot of documentations
  
 ### 🔮 What's Next For Our Project:
-- **NFT Marketplace** where one can sell their best travel photographs as NFTs.
-- Private NFT using **Arcana**.
-- **Expanding for families** too to join us for enjoying the beauty of nature. 
+- Restructuring the view-ledger section for better readibility and better organization
+- Optimization and minor bug fixes
+
 
 <p align="right">(<a href="#read<img width="191" alt="an_logo_light_temp" src="https://user-images.githubusercontent.com/63441472/190889937-afb28215-5bb5-4115-83d2-f7afb73ef8f8.png">
 <me-top">back to top</a>)</p>
@@ -113,9 +113,9 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 
 - <img src = "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" style="margin-top: 40px" height=30px width=30px > **React** - for building the frontend UI <br> 
 - <img src = "https://user-images.githubusercontent.com/63441472/190888196-9164551f-eb48-4da6-ab91-db17adad7c73.svg" height=30px width=30px>**Vite** - as Module bundler instead of webpack <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/221376795-45668137-c096-470e-b288-ea98f1728e94.png" height=40px width=40px > **Etherium**-  as ...... <br>
+- <img src = "https://user-images.githubusercontent.com/63441472/221376795-45668137-c096-470e-b288-ea98f1728e94.png" height=40px width=40px > **Etherium**- as main blockchain <br>
 - <img src = "https://user-images.githubusercontent.com/63441472/221376691-706e8087-7ba9-45be-9d60-583b0fdf518d.png" height=40px width=40px> **Solidity**- for writing smart contract <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/221376973-6ecb124f-12b4-429f-86ac-96afe68d258c.png" height=40px width=40px > **5ire** - .............. <br>
+- <img src = "https://user-images.githubusercontent.com/63441472/221376973-6ecb124f-12b4-429f-86ac-96afe68d258c.png" height=40px width=40px > **5ire** - RPC to host our dapp and as our main blockchain service<br>
 - <img src = "https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height=40px width=40px> **Filecoin**- as IPFS<br>
 - <img src = "https://user-images.githubusercontent.com/63441472/190890501-54045447-d458-4413-a1fa-91a4216bfb44.svg" height=40px width=80px> -  Build on Top of **Polygon** chain <br>
 - <img src = "https://user-images.githubusercontent.com/63441472/221377636-a1f30ce1-9e6b-4e6d-8efd-b9d3e0bc82e2.png" height=40px width=40px> - Deployed in **Digital Ocean**
