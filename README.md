@@ -69,6 +69,9 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 - To solve this problem , we came up with a solution using **blockchain**. 
 -  <H4>Usecase 1:</H4>
 
+
+-  <H4>Usecase 2:</H4>
+
 ### What problem does the project solve?
 - The project aims to solve the problem of information manipulation in public and private sectors.
 - The **DAPP** helps us to create **customizable** ledgers (records) that are stored in **decentralised blockchain** networks.
