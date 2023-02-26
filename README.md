@@ -118,7 +118,7 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 - <img src = "https://user-images.githubusercontent.com/63441472/221376973-6ecb124f-12b4-429f-86ac-96afe68d258c.png" height=40px width=40px > **5ire** - RPC to host our dapp and as our main blockchain service<br>
 - <img src = "https://user-images.githubusercontent.com/63441472/221377772-d474f54c-6049-467c-b830-7c8a220bce5d.png" height=40px width=40px> **Filecoin**- as IPFS<br>
 - <img src = "https://user-images.githubusercontent.com/63441472/190890501-54045447-d458-4413-a1fa-91a4216bfb44.svg" height=40px width=80px> -  Build on Top of **Polygon** chain <br>
-- <img src = "https://user-images.githubusercontent.com/63441472/221377636-a1f30ce1-9e6b-4e6d-8efd-b9d3e0bc82e2.png" height=40px width=40px> - Deployed in **Digital Ocean**
+- GoDaddy for our domain registry 
 
 
 
