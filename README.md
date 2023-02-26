@@ -67,15 +67,24 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 ### Inspiration:
 - Currently, Data in centralized systems is at the risk of being easily **tampered/modified** as there is a single entity(central authority) which is controlling them. For example , FIR copies being tampered/deleted or bank information altered by misusers or post morterm reports manipulated , etc.
 - To solve this problem , we came up with a solution using **blockchain**. 
+-  <H4>Usecase 1:</H4>
 
 ### What problem does the project solve?
-- The project aims to solve the problem of information manipulation.
-- In The landing Page user will be able to see **upcoming events, features of our DAPP and contact us section**.
-- To join an event, user need to sign-in using **Arcana Auth**.
-- To Join A community , User need to go to the **"Join Us"** Sections where all the upcoming events are listed.
-- User can select their prefered event ,then choose the activity , after that the user needs to connect  **Metamask Wallet** to Mint their NFT which will act as their identity proof for rest of the event.
-- **ThirdWeb SDK** is used to mint NFTs.
-- We Used **LightHouse** to store the images of NFTs in **IPFS** network instead of centralized database system.
+- The project aims to solve the problem of information manipulation in public and private sectors.
+- The **DAPP** helps us to create **customizable** ledgers (records) that are stored in **decentralised blockchain** networks.
+- Ledged also allows us to upload files using **FileCoin** IPFS 
+- It also enables the user to systematically preview the past ledgers
+- This makes it immune to tampering or manipulation. 
+* **Transparency** of data is maintained.
+
+
+### Overview 
+- In The landing Page, the user will be able to see features of our DAPP and also get started with our ledger
+- After clicking the **get started** button , the login happens using **Metamask** wallet
+- The user is redirected to their **profile page** , where they can view their **past ledgers** or **create new ledgers**
+- At New Ledger page , user can create their **custom fields and data** , and also upload **files**
+- They are also allowed to preview the file in the **preview section** before finally clicking **Deploy**
+- The previously created ledgers can be viewed under Previous Ledgers page.
 
 ### Challenges we ran into:
   - **ThirdWeb** is not compatible with Webpack so we had to migrate our codebase in middle of the hackathon.
@@ -220,15 +229,17 @@ Distributed under the MIT License
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Contributors
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-
-* [NPM](https://www.npmjs.com/)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br>
+<div>
+<h1 align="center">
+ <b>Made with ❤️ by team Bugbyte
+<h1>
+<a href="https://github.com/arnab2001/Ledged/contributors">
+  <img src="https://contrib.rocks/image?repo=arnab2001/ledged&&max=817" />
+</a>
+</div>
 
 
 
