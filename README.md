@@ -59,22 +59,26 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project🤩🤩
+## 🤩🤩About The Project🤩🤩
 
 https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-8f20-27afd96658d1.mp4
 
 
 
-### Inspiration 💭:
+### 💭Inspiration :
 - Currently, Data in centralized systems is at the risk of being easily **tampered/modified** as there is a single entity(central authority) which is controlling them. For example , FIR copies being tampered/deleted or bank information altered by misusers or post morterm reports manipulated , etc.
 - To solve this problem , we came up with a solution using **blockchain**. 
--  <H4>Usecase 1:</H4>
+-  <H4>Usecase :In law enforcement</H4> 
+&nbsp;&nbsp;  In the field of law enforcement , it is seen that crucial informations like FIR reports , Post-mortem reports are often **illegally tampered** , by influence or power , to favour a certain side. We can prevent this by using blockchain technology , which is immutable and non-destructable.
 
 
--  <H4>Usecase 2:</H4>
+-  <H4>Another Usecase :In banking</H4>
+&nbsp;&nbsp; Most of banking and their servers are centeralized. This , however unwillingly , gives them supreme authority over our data, including access to our account balance , cheque details , money transfers , etc. Servers are prone to hacking or other data breach issues , also , the centeralized company might not be very trustworthy with our data. This issue is also valid for businesses of all scale.
 
-### What problem does the project solve?💡💡
-- The project aims to solve the problem of information manipulation in public and private sectors.
+&nbsp;&nbsp;&nbsp;&nbsp; **Blockchain (One of the ways to implement decentralization)** steps into the picture to solve our problems. 
+
+### 💡What problem does the project solve?
+- The project aims to solve the problem of **information manipulation** in public and private sectors.
 - The **DAPP** helps us to create **customizable** ledgers (records) that are stored in **decentralised blockchain** networks.
 - Ledged also allows us to upload files using **FileCoin** IPFS 
 - It also enables the user to systematically preview the past ledgers
@@ -82,7 +86,7 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 * **Transparency** of data is maintained.
 
 
-### Overview 
+### 🙌Overview 
 - In The landing Page, the user will be able to see features of our DAPP and also get started with our ledger
 - After clicking the **get started** button , the login happens using **Metamask** wallet
 - The user is redirected to their **profile page** , where they can view their **past ledgers** or **create new ledgers**
@@ -90,12 +94,12 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 - They are also allowed to preview the file in the **preview section** before finally clicking **Deploy**
 - The previously created ledgers can be viewed under Previous Ledgers page.
 
-### Challenges we ran into:
+### 💀 Challenges we ran into:
   - **ThirdWeb** is not compatible with Webpack so we had to migrate our codebase in middle of the hackathon.
   - **Arcana's SDKs** and **ThirdWeb SDK** were not build for production so we had to face a lot of bugs.
   -  We had trouble adding metadatas to NFT.
  
-### What's Next For Our Project:
+### 🔮 What's Next For Our Project:
 - **NFT Marketplace** where one can sell their best travel photographs as NFTs.
 - Private NFT using **Arcana**.
 - **Expanding for families** too to join us for enjoying the beauty of nature. 
@@ -104,7 +108,7 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 <me-top">back to top</a>)</p>
 
 
-### Built With
+### 💻 Built With
 
 
 - <img src = "https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" style="margin-top: 40px" height=30px width=30px > **React** - for building the frontend UI <br> 
