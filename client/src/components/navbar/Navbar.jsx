@@ -33,8 +33,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="led__navbar-sign">
-            <p>Logged in</p>
-            <button type="button">Ledgers</button>
+            <button type="button">MetaMask Login</button>
           </div>
         </div>
       </div>

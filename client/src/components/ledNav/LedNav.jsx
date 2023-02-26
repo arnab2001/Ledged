@@ -13,7 +13,14 @@ const LedNav = () => {
       </div>
       <div className="led__lednav-links">
         <div className="led__lednav-links_container">
-          <p>{connectedAccount}</p>
+          <p>
+            {connectedAccount?.slice(0, 3) +
+              "........" +
+              connectedAccount?.slice(
+                connectedAccount.length - 4,
+                connectedAccount.length
+              )}
+          </p>
         </div>
       </div>
       <div className="led__lednav-sign">

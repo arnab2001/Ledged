@@ -75,6 +75,7 @@ const Web3ApiProvider = ({ children }) => {
           for (const i of ledger) {
             l.push([i.field_name, i.value]);
           }
+          l.push(["$$$$", "$$$$$"]);
           d.addLedger(l);
         })
         .catch((e) => console.log(e));

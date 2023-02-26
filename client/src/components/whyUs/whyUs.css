@@ -51,10 +51,9 @@
 .features h1 {
     text-align: left;
     margin-bottom: 10px;
-    font-weight: 100px;
     color: #142961;
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-weight: bolder;
     font-style: normal;
     font-size: 25px;
 }
