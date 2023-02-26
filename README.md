@@ -3,11 +3,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/IRSHIT033/Hype-The-Hike/">
+  <a href="https://github.com/IRSHIT033/Ledged/">
     <img src="https://user-images.githubusercontent.com/63441472/221374116-f811bcfd-d878-480c-ae07-80909064296d.png" alt="Logo" width="120" height="120">
   </a>
 
-  <h3 align="center">Ledged - Immutable and Decentralized ledgers</h3>
+  # Ledged
+  ## Immutable and Decentralized ledgers
   <a align="center" href="###">Watch Demo Video</a>
 
   <p align="center">
@@ -58,13 +59,13 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Project🤩🤩
 
 https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-8f20-27afd96658d1.mp4
 
 
 
-### Inspiration:
+### Inspiration 💭:
 - Currently, Data in centralized systems is at the risk of being easily **tampered/modified** as there is a single entity(central authority) which is controlling them. For example , FIR copies being tampered/deleted or bank information altered by misusers or post morterm reports manipulated , etc.
 - To solve this problem , we came up with a solution using **blockchain**. 
 -  <H4>Usecase 1:</H4>
@@ -72,7 +73,7 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 
 -  <H4>Usecase 2:</H4>
 
-### What problem does the project solve?
+### What problem does the project solve?💡💡
 - The project aims to solve the problem of information manipulation in public and private sectors.
 - The **DAPP** helps us to create **customizable** ledgers (records) that are stored in **decentralised blockchain** networks.
 - Ledged also allows us to upload files using **FileCoin** IPFS 
