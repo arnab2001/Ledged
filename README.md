@@ -65,10 +65,11 @@ https://user-images.githubusercontent.com/63441472/221376076-b5807660-1f6f-4e8f-
 
 
 ### Inspiration:
-- Currently, the ticketing system can't help people reflect on special moments from past events. Hence, NFTs have arrived to make tickets more functional and easy to collect for memories. 
+- Currently, Data in centralized systems is at the risk of being easily **tampered/modified** as there is a single entity(central authority) which is controlling them. For example , FIR copies being tampered/deleted or bank information altered by misusers or post morterm reports manipulated , etc.
+- To solve this problem , we came up with a solution using **blockchain**. 
 
 ### What problem does the project solve?
-- Empowers Community Driven tourism
+- The project aims to solve the problem of information manipulation.
 - In The landing Page user will be able to see **upcoming events, features of our DAPP and contact us section**.
 - To join an event, user need to sign-in using **Arcana Auth**.
 - To Join A community , User need to go to the **"Join Us"** Sections where all the upcoming events are listed.
@@ -135,22 +136,21 @@ _How to setup this project_
    ```
 4. configure `.env` and add
    ```env
-   DB_CONNECT = 'mongodb+srv://arnab0321:bH1Ttke9EZBmYClg@cluster0.dehf4yw.mongodb.net/?retryWrites=true&w=majority'
+   DB_CONNECT = 'mongodb+srv://<username>:<password>@cluster0.dehf4yw.mongodb.net/?retryWrites=true&w=majority'
    ```
-   
-   
-6. Create a wallet.json file and add your public and private key
+ 
+5. Create a wallet.json file and add your public and private key
    ```json
    {
     "privateKey": "<private_key>",
     "publicKey": "<public_key>"
     }
     ```
-  Then import wallet using the private key, use the following command
+6. Then import wallet using the private key, use the following command
   ```sh
-  lighthouse-web3 import-wallet ./wallet.json
+  Metamask
   ```
-5 run 
+7. run 
   ```sh
   npm start dev
    ```
@@ -171,18 +171,18 @@ _How to setup this project_
 ## Roadmap
 &nbsp; 
 - [x] landing page
-- [x] Recent Events
-- [x] Login using Arcana
-- [x] Join Us / Activity Section
-- [x] Mint NFT upon joining
-- [x] NFT ticketing
-- [x] Intigrate Lighthouse IPFS
-- [ ] Private NFT
-- [ ] NFT Marketplace
+- [x] Avatar component
+- [x] Ledger page
+- [x] PastLedger page
+- [x] Adding smart contract 
+- [x] Intigrate 5ire
+- [x] Intigrate filecoin
+- [x] Add backend for Autosave 
+- [ ] deploy in digital ocean
 
 
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/arnab2001/Ledged/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,7 +226,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 
 * [NPM](https://www.npmjs.com/)
-* React icons
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
