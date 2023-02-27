@@ -9,7 +9,9 @@
 
   # Ledged
   ## Immutable and Decentralized ledgers
-  <a align="center" href="###">Watch Demo Video</a>
+  <b><a align="center" href="https://www.youtube.com/watch?v=AWZpPUwqZ2s">Watch Demo Video</a></b>
+  <br/>
+  <b><a a align="center" href="or-jurm-nahi-b.us">Live</a><b>
 
   <p align="center">
     Use this readme for getting stared with this project
@@ -18,8 +20,6 @@
     <br />
     <br />
     <a href="#"> Blog </a>
-    .
-    <a href="#">Live</a>
     ·
     <a href="https://github.com/arnab2001/ledged/issues">Report Issues</a>
     ·
