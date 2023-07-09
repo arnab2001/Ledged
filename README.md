@@ -4,8 +4,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/IRSHIT033/Ledged/">
-    <img src="https://user-images.githubusercontent.com/63441472/221374116-f811bcfd-d878-480c-ae07-80909064296d.png" alt="Logo" width="120" height="120">
-  </a>
+    <img src="https://github.com/bishakhne0gi/Ledged/assets/50258639/acd6d695-101b-4a7b-a3e7-3637e64090da" alt="Logo" width="120" height="120">
+
 
   # Ledged
   ## Immutable and Decentralized ledgers
