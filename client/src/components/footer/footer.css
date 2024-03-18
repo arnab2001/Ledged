@@ -1,16 +1,7 @@
-.led__footer__bg {
-    background-color: azure;
-    /* position: fixed; */
-    /* z-index: 100; */
-}
 
 .led__footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 6rem;
-    font-family: 'Fira Code', monospace;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Source Code Pro', monospace;
+    color: var(--white);
 }

@@ -1,60 +1,50 @@
 import React from 'react'
 import './whyUs.css'
-import { BsFileEarmarkLock } from "react-icons/bs";
-import Lottie from 'lottie-react'
-import About from '../../assets/about__animation.json'
-import { BiUserPlus, BiLogIn } from "react-icons/bi";
+import { Images } from '../../assets'
+import features from '../../assets/features.json'
 const WhyUs = () => {
     return (
         <>
-            <div className="led__bg">
+            <div className="led__star section__padding" id="whyUs">
+                <img src={Images.star1} />
+                <img src={Images.star1} />
+            </div>
+            <div className="led__title" id="whyUs">
+                <div className="led__text section__padding">
+                    FEATURES
+                </div>
+            </div>
+            <div className="led__whyUs section__padding">
+                <div className='star'>
+                    <img src={Images.star1} />
+                    <img src={Images.star1} />
+                </div>
+                {
+                    features.map((feature, index) => (
+                        <>
 
-
-                <div className="led__whyUs section__padding">
-
-                    <div className="led__whyUs_header">
-                        Why Us?
-                    </div>
-                    <div className="led__whyUs_content">
-                        <div className="led__whyUs_content-right">
-                            <div className="led__whyUs_content-right-animation " >
-                                <Lottie animationData={About} />
-
-                            </div>
-                        </div>
-                        <div className="led__whyUs_content-left">
-                            <div className="features">
-                                <h1>Security & Immutability</h1>
-                                <div className="feature-description">
-                                    <div className="feature-icon">
-                                        <BsFileEarmarkLock className='icon' />
-                                    </div>
-                                    <div className="feature-text">
-                                        <p> Come and experience a variety of drinks along with a great set of people to talk and interact with </p>
-                                    </div>
+                            <div className='points section__padding ' key={index}>
+                                <div className='point_left'>
+                                    <img src={Images.bullet} />
                                 </div>
-                                <h1>User Customisable Ledgers</h1>
-                                <div className="feature-description">
-                                    <div className="feature-icon">
-                                        <BiUserPlus className='icon' />
+                                <div className='point_right'>
+                                    <div className='point_title'>
+                                        {feature.title}
                                     </div>
-                                    <div className="feature-text">
-                                        <p> Worried about Bookings/Availability ? Guess what ? Our 24 hours Online booking portal just solves the issue ! </p>
-                                    </div>
-                                </div>
-                                <h1>Login & Authentication</h1>
-                                <div className="feature-description">
-                                    <div className="feature-icon">
-                                        <BiLogIn className='icon' />
-                                    </div>
-                                    <div className="feature-text">
-                                        <p> Our budget friendly menu makes sure we do not hit your pockets that hard </p>
+                                    <div className='point_text'>
+                                        {feature.description}
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                    </div>
+                            <div className='marker section__padding'>
+                                <img src={Images.marker} height={60} width={60} />
+                            </div>
+                        </>
+                    ))
+                }
+                <div className='star'>
+                    <img src={Images.star1} />
+                    <img src={Images.star1} />
                 </div>
             </div>
         </>

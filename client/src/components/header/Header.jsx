@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import "./header.css";
-import Lottie from "lottie-react";
-import Cashier from "../../assets/cashier__animation.json";
 import { useNavigate } from "react-router-dom";
 import { Web3ApiContext } from "../../context/Web3Context";
+import { Images } from "../../assets";
 
 const Header = () => {
   const { connectWallet } = useContext(Web3ApiContext);
@@ -19,27 +18,24 @@ const Header = () => {
   return (
     <>
       <div className="led__header section__padding" id="home">
-        <div className="led__header-content">
-          <h1
-            className="gradient__text gradient__text-fade"
-            data-aos="fade-down"
-          >
-            LEDGED
-          </h1>
-          <p className="gradient__para">
-            Bringing Immutable & Decentralised Ledgers to People using
-            BlockChain.
-          </p>
+        <div className="header__left">
+          <span className="span1">Get Started With</span>
+          <h1 className="heading">IMMUTABLE</h1>
+          <h1 className="heading">PERSONALISED</h1>
+          <span className="span2">Ledger at your fingertips</span>
 
-          <div className="led__header-content__input">
-            <button type="button" onClick={goto_Profile}>
-              Get Started
-            </button>
-          </div>
+
+
+        </div>
+        <div className="header__right">
+          <img src={Images.personal} />
         </div>
 
-        <div className="led__header-image">
-          <Lottie animationData={Cashier} />
+      </div>
+      <div className="led__button section__padding">
+        <div className="button__styling2" type="button" onClick={goto_Profile}>
+          Get Started
+          <img src={Images.rightArrow} />
         </div>
       </div>
     </>

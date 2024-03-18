@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <>
             <div className="led__footer__bg">
-                <div className='led__footer section__padding'>Made with ❤️ by © B U G  B Y T E 23</div>
+                <div className='led__footer section__padding'>Made with ❤️ © B U G  B Y T E</div>
             </div>
         </>
     )

@@ -7,7 +7,7 @@ import "./lednav.css";
 const LedNav = () => {
   const { connectedAccount } = useContext(Web3ApiContext);
   return (
-    <div className="led__lednav">
+    <div className="led__lednav section__padding">
       <div className="led__lednav-links_logo">
         <img src={logo} />
       </div>
