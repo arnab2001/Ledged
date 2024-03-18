@@ -1,0 +1,27 @@
+.loading
+{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.loading__text
+{
+    margin-left: 2rem;
+    color: var(--deep-pink);
+    font-size: 64px;
+    font-weight: 800;
+
+}
+.loading__image {
+    animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

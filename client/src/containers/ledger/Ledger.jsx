@@ -148,7 +148,6 @@ const Ledger = () => {
       <div className="led__deploy section__padding">
         <button onClick={Deploy_ledger_data}>Deploy</button>
       </div>
-      <Footer />
     </>
   );
 };

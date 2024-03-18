@@ -4,7 +4,7 @@ import Animate from "../../assets/avatar__animation.json";
 import logo from "../../assets/logo.png";
 import "./avatar.css";
 import Lottie from "lottie-react";
-import { Footer } from "../../components";
+import { Footer, Loading } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { Web3ApiContext } from "../../context/Web3Context";
 const Avatar = () => {
@@ -28,58 +28,63 @@ const Avatar = () => {
     }
   }, []);
 
-  if (!connectedAccount) {
-    return <h1>loading...</h1>;
-  } else
-    return (
-      <>
-        <div className="led__avatar section__padding">
-          <div className="led__left">
-            <div className="led__left__upper">
-              <div className="led__left-logo">
-                <img className="led__left-image" src={logo} />
+  return (
+    <>
+      {
+        connectedAccount ? (
+          <>
+            <div className="led__avatar section__padding">
+              <div className="led__left">
+                <div className="led__left__upper">
+                  <div className="led__left-logo">
+                    <img className="led__left-image" src={logo} />
+                  </div>
+                  <div className="led__left-logo__1">
+                    <Lottie animationData={Animate} width={10} height={10} />
+                  </div>
+                </div>
+                <div className="led__header-content">
+                  <h1 className="gradient__text">LEDGED</h1>
+                </div>
               </div>
-              <div className="led__left-logo__1">
-                <Lottie animationData={Animate} width={10} height={10} />
+              <div className="led__right">
+                <div className="led__right-logo">
+                  <img className="led__right-image" src={avatar} />
+                </div>
+                <div className="led__right-username">
+                  <p>
+                    {connectedAccount.slice(0, 3) +
+                      "...." +
+                      connectedAccount.slice(
+                        connectedAccount.length - 4,
+                        connectedAccount.length
+                      )}
+                  </p>
+                </div>
+                <div className="led__right-content__input">
+                  <button
+                    className="led__right-content__button"
+                    onClick={goTo_pastLedger}
+                  >
+                    Past Ledgers
+                  </button>
+                  <button
+                    className="led__right-content__button"
+                    onClick={goTo_createLedger}
+                  >
+                    Create New Ledger
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="led__header-content">
-              <h1 className="gradient__text">LEDGED</h1>
-            </div>
-          </div>
-          <div className="led__right">
-            <div className="led__right-logo">
-              <img className="led__right-image" src={avatar} />
-            </div>
-            <div className="led__right-username">
-              <p>
-                {connectedAccount.slice(0, 3) +
-                  "...." +
-                  connectedAccount.slice(
-                    connectedAccount.length - 4,
-                    connectedAccount.length
-                  )}
-              </p>
-            </div>
-            <div className="led__right-content__input">
-              <button
-                className="led__right-content__button"
-                onClick={goTo_pastLedger}
-              >
-                Past Ledgers
-              </button>
-              <button
-                className="led__right-content__button"
-                onClick={goTo_createLedger}
-              >
-                Create New Ledger
-              </button>
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </>
-    );
+          </>
+        ) :
+          <>
+            <Loading />
+          </>
+      }
+    </>
+  );
 };
 
 export default Avatar;

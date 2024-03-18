@@ -6,6 +6,7 @@ import star1 from "./Star.svg"
 import marker from "./Marker.svg"
 import bullet from "./Bullets.svg"
 import background from "./Background.svg"
+import loading from "./Loading.svg"
 export const Images = {
     thumb,
     logo,
@@ -14,5 +15,6 @@ export const Images = {
     star1,
     marker,
     bullet,
-    background
+    background,
+    loading
 }

@@ -26,11 +26,7 @@ const router = createBrowserRouter(
           element: <PastLedger />,
         },
         {
-          path: "/*",
-          element: <Landing />,
-        },
-        {
-          path: "/creater-ledger",
+          path: "/create-ledger",
           element: <Ledger />,
         }
       ]
