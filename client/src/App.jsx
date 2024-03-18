@@ -1,7 +1,6 @@
 import React from "react";
 import "./app.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { Avatar, Landing, Ledger, PastLedger } from "./containers";
+import { Landing, Ledger, PastLedger } from "./containers";
 const App = () => {
   return (
     <>

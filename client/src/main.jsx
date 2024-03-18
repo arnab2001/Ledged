@@ -4,7 +4,7 @@ import App from "./App";
 import Web3ApiProvider, { Web3ApiContext } from "./context/Web3Context";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
-import { Avatar, Landing, Ledger, PastLedger } from "./containers";
+import { Landing, Ledger, PastLedger } from "./containers";
 
 
 
@@ -18,17 +18,17 @@ const router = createBrowserRouter(
           element: <Landing />,
         },
         {
-          path: "/profile",
-          element: <Avatar />,
-        },
-        {
           path: "/past-ledger",
           element: <PastLedger />,
         },
         {
           path: "/create-ledger",
           element: <Ledger />,
-        }
+        },
+        {
+          path: "/*",
+          element: <Landing />,
+        },
       ]
     }
   ]

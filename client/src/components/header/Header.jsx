@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import "./header.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Web3ApiContext } from "../../context/Web3Context";
 import { Images } from "../../assets";
 
 const Header = () => {
   const { connectWallet } = useContext(Web3ApiContext);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const goto_Profile = async () => {
-    navigate("/profile");
+    // navigate("/profile");
     try {
       await connectWallet();
     } catch (err) {
@@ -33,10 +33,27 @@ const Header = () => {
 
       </div>
       <div className="led__button section__padding">
-        <div className="button__styling2" type="button" onClick={goto_Profile}>
-          Get Started
-          <img src={Images.rightArrow} />
-        </div>
+        {
+          !connectWallet ? (
+            <>
+              <div className="button__styling2" type="button">
+                Get Started
+                <img src={Images.rightArrow} />
+              </div>
+            </>
+          )
+            :
+            (
+              <>
+                <div className="button__styling3" type="button" >
+                  Past Ledgers
+                  <img src={Images.rightArrow} />
+                </div>
+              </>
+            )
+
+        }
+
       </div>
     </>
   );
