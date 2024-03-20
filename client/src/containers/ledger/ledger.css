@@ -20,6 +20,8 @@
     display: flex;
     flex-direction: column;
     color: var(--grey) !important;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 .create_left
 {
@@ -98,14 +100,14 @@
 }
 .preview_key
 {
-    color: var(--deep-pink);
+    color: var(--grey);
     font-weight:800;
     font-family: 'Work-Sans', sans-serif;
     font-size: 24px;
 }
 .preview_value
 {
-    color: var(--pink);
+    color: var(--grey);
     font-weight:400;
     font-family: 'Work-Sans', sans-serif;
     font-size: 20px;
@@ -148,4 +150,28 @@ input, textarea{
     align-items: center;
     width: 100%;
     justify-content: flex-end;
+}
+.preview_top
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.preview_each
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.preview_header
+{
+    display: flex;
+    width: 100%;
+    color: var(--deep-pink);
+    font-size: 40px;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
 }

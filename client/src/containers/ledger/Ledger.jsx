@@ -1,14 +1,12 @@
 import React, { useState, useContext } from "react";
 import "./ledger.css";
-import { FaTrashAlt } from "react-icons/fa";
-import { LedNav, Footer, Loading } from "../../components";
 import { Web3ApiContext } from "../../context/Web3Context";
 import { main } from "../../Util/web3Storage";
 import { useNavigate } from "react-router-dom";
 import { Images } from "../../assets";
 const Ledger = () => {
   const navigate = useNavigate();
-  const [loading, SetLoading] = useState(false);
+  const [loadingImage, setLoadingImage] = useState(false);
   const [file, setFile] = useState();
   const [workspace, SetworkSpace] = useState({ field_name: "", value: "" });
   const [preview, setPreview] = useState([]);
@@ -72,7 +70,11 @@ const Ledger = () => {
                 >CUSTOM</div>
               </div>
               <div className='options_bottom'>
-                <div className='button__styling4'>ATTACHMENT</div>
+                <div className='button__styling4'
+                  onClick={() => {
+                    SetworkSpace({ field_name: "ATTACHMENT", value: "" });
+                    SetFileAccess(!fileAccess);
+                  }}>ATTACHMENT</div>
               </div>
             </div>
             <div className='update'>
@@ -135,7 +137,7 @@ const Ledger = () => {
                 )
               }
               {
-                workspace.field_name !== 'TITLE' && workspace.field_name !== 'ORGANISATION' &&
+                workspace.field_name !== 'TITLE' && workspace.field_name !== 'ORGANISATION' && !fileAccess &&
                 (
                   <>
 
@@ -166,25 +168,68 @@ const Ledger = () => {
                   </>
                 )
               }
+              {
+                fileAccess &&
+                (
+                  <>
+                    <input
+                      className="form-control"
+                      type="file"
+                      id="formFileMultiple"
+                      name="file"
+                      onChange={async (e) => {
+                        setLoadingImage(true);
+                        const cid = await main(e.target.files);
+                        SetworkSpace({ ...workspace, value: cid });
+                        setLoadingImage(false);
+                      }}
+                    />
+                    {
+                      !loadingImage ? (
+                        <>
+                          Uploading..
+                        </>
+                      ) :
+                        <>
+                          <div className='submit_button'
+                            onClick={() => {
+                              SetworkSpace({ field_name: "", value: "" });
+                              setPreview([...preview, workspace]);
+                              console.log(workspace)
+                              console.log(preview)
+                            }}
+                          >
+                            <img src={Images.arrowup} height={30} width={30} />
+                          </div>
+                        </>
+                    }
+                  </>
+                )
+              }
             </div>
           </div>
           <div className='create_right'>
             <div className='text_img'>
+              <div className='preview_header'>LEDGER PREVIEW</div>
               {
                 preview.map((p, idx) => (
                   <>
                     <div key={idx}>
-                      <div className="">
-                        <div className="preview_key">{p.field_name}</div>
+                      <div className="preview_each">
+                        <div className="preview_top">
+                          <div className="preview_key">{p.field_name}</div>
+                          <div className="preview_delete" onClick={() => { delete_preview(idx) }} >
+                            <img src={Images.deleteIcon} height={20} width={20} alt="delete" />
+                          </div>
+                        </div>
+
                         <div className="preview_value">
                           {p.value?.length > 20
                             ? p.value?.slice(0, 6) + "..."
                             : p.value}
                         </div>
 
-                        <div className="led__preview-delete">
-                          <FaTrashAlt onClick={() => delete_preview(idx)} />
-                        </div>
+
                       </div>
                     </div>
                   </>

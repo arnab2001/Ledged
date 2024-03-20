@@ -71,7 +71,7 @@ const Navbar = () => {
           <div className="led__navbar-links_logo">
             <Link to="/">
 
-              <img src={Images.logo} />
+              <img className="circular_image" src={Images.logo} height={60} width={60} />
             </Link>
             {
               connectedAccount && (

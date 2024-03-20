@@ -10,6 +10,7 @@ import loading from "./Loading.svg"
 import user from './user.jpg'
 import texteditor from './Texteditor.svg'
 import arrowup from './ArrowUp.svg'
+import deleteIcon from './Delete.svg'
 export const Images = {
     thumb,
     logo,
@@ -22,5 +23,6 @@ export const Images = {
     loading,
     user,
     texteditor,
-    arrowup
+    arrowup,
+    deleteIcon
 }
