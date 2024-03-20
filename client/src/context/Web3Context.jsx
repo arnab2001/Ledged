@@ -1,7 +1,8 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 import { deployedAddress } from "../Util/keys";
 import OrgContractService from "../contract/OrgContract.json";
+import { LoadingContext } from "./LoadingContext";
 
 let contractAddress = deployedAddress;
 
@@ -21,6 +22,7 @@ const getContract = async () => {
 //----------------------------------------------------------//
 
 const Web3ApiProvider = ({ children }) => {
+  const { setLoading } = useContext(LoadingContext);
   //connection account state
   const [connectedAccount, setConnectedAccount] = useState(null);
 
@@ -43,7 +45,7 @@ const Web3ApiProvider = ({ children }) => {
       window.ethereum.on("accountsChanged", () => {
         window.location.reload();
       });
-
+      setLoading(false);
       setConnectedAccount(accounts[0]);
     } catch (error) {
       console.log(error);

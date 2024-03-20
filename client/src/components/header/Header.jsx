@@ -1,15 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./header.css";
 // import { useNavigate } from "react-router-dom";
 import { Web3ApiContext } from "../../context/Web3Context";
 import { Images } from "../../assets";
+import Loading from "../loading/Loading";
+import { useNavigate } from "react-router-dom";
+import { LoadingContext } from "../../context/LoadingContext";
 
 const Header = () => {
-  const { connectWallet } = useContext(Web3ApiContext);
-  // const navigate = useNavigate();
-  const goto_Profile = async () => {
-    // navigate("/profile");
+  const { connectedAccount, connectWallet } = useContext(Web3ApiContext);
+  const navigate = useNavigate();
+  const { loading, setLoading } = useContext(LoadingContext);
+  const wallet = async () => {
     try {
+      setLoading(true);
       await connectWallet();
     } catch (err) {
       console.log(err);
@@ -17,6 +21,7 @@ const Header = () => {
   };
   return (
     <>
+      {loading && <Loading />}
       <div className="led__header section__padding" id="home">
         <div className="header__left">
           <span className="span1">Get Started With</span>
@@ -34,12 +39,14 @@ const Header = () => {
       </div>
       <div className="led__button section__padding">
         {
-          !connectWallet ? (
+          !connectedAccount ? (
             <>
-              <div className="button__styling2" type="button">
+              <div className="button__styling2" type="button" onClick={wallet}>
                 Get Started
                 <img src={Images.rightArrow} />
               </div>
+
+
             </>
           )
             :
@@ -53,8 +60,10 @@ const Header = () => {
             )
 
         }
-
       </div>
+
+
+
     </>
   );
 };

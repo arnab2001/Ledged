@@ -17,9 +17,10 @@ const Navbar = () => {
     navigate("/past-ledger");
   };
 
-  const { connectedAccount, checkIfWalletIsConnected, Get_ledgerdata } =
+  const { connectWallet, connectedAccount, checkIfWalletIsConnected, Get_ledgerdata } =
     useContext(Web3ApiContext);
   console.log(connectedAccount);
+  console.log(connectWallet);
   const changeBackground = () => {
     if (window.scrollY >= 100) {
       setNavbar(true);
@@ -41,24 +42,53 @@ const Navbar = () => {
   }, []);
 
 
+  //random avatar
+
+  const [avatarUrl, setAvatarUrl] = useState("");
+
+  useEffect(() => {
+
+    const style = 'pixel-art'
+
+    const seed = Math.floor(Math.random() * 10000).toString();
+
+
+    const randomAvatar = `https://api.dicebear.com/8.x/${style}/svg?=seed${seed}`;
+    setAvatarUrl(randomAvatar);
+  }, []);
+
+
+
+
+
+
+
+
   return (
     <>
-      <div className={navbar ? "led active section__padding" : "led section__padding"}>
+      <div className="led">
         <div className="led__navbar">
           <div className="led__navbar-links_logo">
             <Link to="/">
 
               <img src={Images.logo} />
             </Link>
-            <img className="circular_image" src={Images.user} height={60} width={60} />
-            <a href="" className="coloured">
-              {connectedAccount?.slice(0, 3) +
-                "...." +
-                connectedAccount?.slice(
-                  connectedAccount.length - 4,
-                  connectedAccount.length
-                )}
-            </a>
+            {
+              connectedAccount && (
+                <>
+                  <img className="circular_image" src={avatarUrl} height={60} width={60} />
+                  <a href="" className="coloured">
+                    {connectedAccount?.slice(0, 3) +
+                      "...." +
+                      connectedAccount?.slice(
+                        connectedAccount.length - 4,
+                        connectedAccount.length
+                      )}
+                  </a>
+                </>
+              )
+            }
+
 
           </div>
           <div className="led__navbar-links">

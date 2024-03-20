@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react";
 import "./ledger.css";
 import { FaTrashAlt } from "react-icons/fa";
-import { LedNav, Footer } from "../../components";
+import { LedNav, Footer, Loading } from "../../components";
 import { Web3ApiContext } from "../../context/Web3Context";
 import { main } from "../../Util/web3Storage";
 import { useNavigate } from "react-router-dom";
+import { Images } from "../../assets";
 const Ledger = () => {
   const navigate = useNavigate();
   const [loading, SetLoading] = useState(false);
@@ -33,9 +34,33 @@ const Ledger = () => {
 
   return (
     <>
-      <LedNav />
-      {/* <Navbar /> */}
-      <div className="led__ledger">
+      <div className='section__padding'>
+        <div className='create_container'>
+          <div className='create_left'>
+            <div className='options'>
+              <div className='options_top'>
+                <div className='button__styling4'>TITLE</div>
+                <div className='button__styling4'>ORGANISATION</div>
+              </div>
+              <div className='options_bottom'>
+                <div className='button__styling4'>CUSTOM</div>
+              </div>
+            </div>
+            <div className='update'>
+              <input className='input_field' />
+              <textarea />
+              <div className='submit_button'>
+                <img src={Images.arrowup} height={30} width={30} />
+              </div>
+            </div>
+          </div>
+          <div className='create_right'>
+            <div className='text_img'></div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="led__ledger">
         <div className="led__tools">
           <div className="tool__buttons">
             <button
@@ -117,7 +142,9 @@ const Ledger = () => {
                 Add
               </button>
             ) : (
-              <h1 className="section__padding">{"loading..."}</h1>
+              <>
+                <Loading />
+              </>
             )}
           </div>
         </div>
@@ -147,7 +174,7 @@ const Ledger = () => {
       </div>
       <div className="led__deploy section__padding">
         <button onClick={Deploy_ledger_data}>Deploy</button>
-      </div>
+      </div> */}
     </>
   );
 };

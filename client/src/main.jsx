@@ -5,6 +5,7 @@ import Web3ApiProvider, { Web3ApiContext } from "./context/Web3Context";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import { Landing, Ledger, PastLedger } from "./containers";
+import LoadingContextProvider from "./context/LoadingContext";
 
 
 
@@ -39,8 +40,11 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Web3ApiProvider>
-      <RouterProvider router={router} />
-    </Web3ApiProvider>
+    <LoadingContextProvider>
+
+      <Web3ApiProvider>
+        <RouterProvider router={router} />
+      </Web3ApiProvider>
+    </LoadingContextProvider>
   </React.StrictMode>
 );

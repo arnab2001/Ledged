@@ -8,6 +8,8 @@ import bullet from "./Bullets.svg"
 import background from "./Background.svg"
 import loading from "./Loading.svg"
 import user from './user.jpg'
+import texteditor from './Texteditor.svg'
+import arrowup from './ArrowUp.svg'
 export const Images = {
     thumb,
     logo,
@@ -18,5 +20,7 @@ export const Images = {
     bullet,
     background,
     loading,
-    user
+    user,
+    texteditor,
+    arrowup
 }
