@@ -38,24 +38,166 @@ const Ledger = () => {
         <div className='create_container'>
           <div className='create_left'>
             <div className='options'>
+              <div className="title">
+                Features
+              </div>
               <div className='options_top'>
-                <div className='button__styling4'>TITLE</div>
-                <div className='button__styling4'>ORGANISATION</div>
+                <div className='button__styling4'
+                  onClick={() => {
+                    SetFileAccess(false);
+                    SetworkSpace({
+                      field_name: "TITLE"
+                    })
+                  }}>
+                  TITLE
+                </div>
+                <div className='button__styling4'
+                  onClick={() => {
+                    SetFileAccess(false);
+                    SetworkSpace({
+                      field_name: "ORGANISATION"
+                    })
+                  }}
+                >ORGANISATION</div>
               </div>
               <div className='options_bottom'>
-                <div className='button__styling4'>CUSTOM</div>
+                <div className='button__styling4'
+                  onClick={() => {
+                    SetFileAccess(false);
+                    SetworkSpace({
+                      field_name: "",
+                      value: ""
+                    })
+                  }}
+                >CUSTOM</div>
+              </div>
+              <div className='options_bottom'>
+                <div className='button__styling4'>ATTACHMENT</div>
               </div>
             </div>
             <div className='update'>
-              <input className='input_field' />
-              <textarea />
-              <div className='submit_button'>
-                <img src={Images.arrowup} height={30} width={30} />
-              </div>
+              {
+                workspace.field_name === 'TITLE' &&
+                (
+                  <>
+
+                    <input className='input_field'
+                      defaultValue={workspace.field_name}
+                      disabled
+                    />
+                    <textarea
+                      placeholder="Ledger Title"
+                      value={workspace.value}
+                      onChange={(e) => {
+                        SetworkSpace({ ...workspace, value: e.target.value })
+                      }}
+                    />
+                    <div className='submit_button'
+                      onClick={() => {
+                        setPreview([...preview, workspace]);
+                        console.log(workspace)
+                        console.log(preview)
+                        SetworkSpace({ field_name: "", value: "" });
+                      }}
+                    >
+                      <img src={Images.arrowup} height={30} width={30} />
+                    </div>
+                  </>
+                )
+              }
+              {
+                workspace.field_name === 'ORGANISATION' &&
+                (
+                  <>
+
+                    <input className='input_field'
+                      defaultValue={workspace.field_name}
+                      disabled
+                    />
+                    <textarea
+                      placeholder="Ledger Organisation"
+                      value={workspace.value}
+                      onChange={(e) => {
+                        SetworkSpace({ ...workspace, value: e.target.value })
+                      }}
+                    />
+                    <div className='submit_button'
+                      onClick={() => {
+                        SetworkSpace({ field_name: "", value: "" });
+                        setPreview([...preview, workspace]);
+                        console.log(workspace)
+                        console.log(preview)
+                      }}
+                    >
+                      <img src={Images.arrowup} height={30} width={30} />
+                    </div>
+                  </>
+                )
+              }
+              {
+                workspace.field_name !== 'TITLE' && workspace.field_name !== 'ORGANISATION' &&
+                (
+                  <>
+
+                    <input className='input_field'
+                      value={workspace.field_name}
+                      placeholder="Custom Ledger Key"
+                      onChange={(e) => {
+                        SetworkSpace({ ...workspace, field_name: e.target.value })
+                      }}
+                    />
+                    <textarea
+                      placeholder="Cutom Ledger Value"
+                      value={workspace.value}
+                      onChange={(e) => {
+                        SetworkSpace({ ...workspace, value: e.target.value })
+                      }}
+                    />
+                    <div className='submit_button'
+                      onClick={() => {
+                        SetworkSpace({ field_name: "", value: "" });
+                        setPreview([...preview, workspace]);
+                        console.log(workspace)
+                        console.log(preview)
+                      }}
+                    >
+                      <img src={Images.arrowup} height={30} width={30} />
+                    </div>
+                  </>
+                )
+              }
             </div>
           </div>
           <div className='create_right'>
-            <div className='text_img'></div>
+            <div className='text_img'>
+              {
+                preview.map((p, idx) => (
+                  <>
+                    <div key={idx}>
+                      <div className="">
+                        <div className="preview_key">{p.field_name}</div>
+                        <div className="preview_value">
+                          {p.value?.length > 20
+                            ? p.value?.slice(0, 6) + "..."
+                            : p.value}
+                        </div>
+
+                        <div className="led__preview-delete">
+                          <FaTrashAlt onClick={() => delete_preview(idx)} />
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ))
+              }
+            </div>
+            <div className='deploy_button'
+            >
+
+              <div className='button__styling4'
+                onClick={Deploy_ledger_data}
+              >Deploy</div>
+            </div>
           </div>
         </div>
       </div>

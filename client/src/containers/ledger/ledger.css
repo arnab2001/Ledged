@@ -16,6 +16,10 @@
     width: 100%;
     border-radius: 12px;
     border: none;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--grey) !important;
 }
 .create_left
 {
@@ -30,7 +34,7 @@
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
-
+    gap: 0.5rem;
     border: 0.5px solid var(--grey);
     border-radius: 12px;
     padding: 2rem;
@@ -92,6 +96,20 @@
     /* border: none; */
     border-radius: 12px;
 }
+.preview_key
+{
+    color: var(--deep-pink);
+    font-weight:800;
+    font-family: 'Work-Sans', sans-serif;
+    font-size: 24px;
+}
+.preview_value
+{
+    color: var(--pink);
+    font-weight:400;
+    font-family: 'Work-Sans', sans-serif;
+    font-size: 20px;
+}
 .input_field
 {
     background: transparent;
@@ -115,165 +133,19 @@ textarea{
     align-items: flex-end;
     width: 100%;
 }
-::-webkit-input-placeholder {
-    font-family: 'Poppins', sans-serif;
-
+input, textarea{
     font-size: 20px;
 }
-
-
-.led__ledger {
-    display: flex;
-    flex-direction: row;
-    height: 80vh;
-    background-color: transparent;
-    padding: 1rem 6rem 0 6rem;
+.title
+{
+    font-weight: bolder;
+    color: var(--grey);
+    font-size: 40px;
 }
-
-.led__tools {
+.deploy_button
+{
     display: flex;
-    flex-direction: column;
-    width: 25%;
-    background-color: #072D37;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    justify-content: center;
-}
-
-.led__workspace {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 37.5%;
-    background-color: #15CD96;
-}
-
-.led__preview {
-    font-family: 'Fira Code', monospace;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Source Code Pro', monospace;
-    display: flex;
-    flex-direction: column;
-    width: 37.5%;
-    background-color: white;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.tool__buttons {
-    height: 400px;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-
-}
-
-.tool__buttons button {
-    width: 18rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 28px;
-    background: #15CD96;
-    border: 2px solid #15CD96;
-    padding: 20px;
-    color: #072D37;
-    cursor: pointer;
-    outline: none;
-    border-radius: 50px;
-}
-
-.workspace__inputs {
-    margin-top: 74px;
-    height: 200px;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.workspace__inputs input {
-    border: 3px solid #1a906f;
-    padding: 24px;
-    width: 16rem;
-    text-align: center;
-    border-radius: 50px;
-    background: #6aeac6;
-    font-family: 'Poppins', sans-serif;
-    color: #072D37;
-    font-size: 20px;
-}
-
-.workspace__button {
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-}
-
-.workspace__button button {
-    width: 6rem;
-    /* margin-right: 12px; */
-    margin-top: 35px;
-    min-height: 41px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    background: #072D37;
-    border: 2px solid #072D37;
-    padding: 0px;
-    color: #15CD96;
-    cursor: pointer;
-    outline: none;
-    border-radius: 50px;
-}
-
-.led__preview-header {
-    padding: 10px;
-    text-align: center;
-    font-weight: bolder
-}
-
-.led__preview-table {
-    padding: 10px 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* justify-content: center; */
-    justify-content: space-between;
-    font-weight: bold;
-}
-
-.led__deploy {
-    display: flex;
+    width: 100%;
     justify-content: flex-end;
-    padding: 1rem 6rem 4rem 4rem;
-}
-
-.led__deploy button {
-    width: 125px;
-    min-height: 53px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    background: #15CD96;
-    border: 2px solid #15CD96;
-    padding: 0px;
-    color: #072D37;
-    cursor: pointer;
-    outline: none;
-    border-radius: 5px;
-}
-
-.led__preview-delete:hover {
-    cursor: pointer;
-}
-
-button {
-    border-radius: 10px;
 }
