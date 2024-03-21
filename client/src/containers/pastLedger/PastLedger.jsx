@@ -15,28 +15,9 @@ const PastLedger = () => {
   }, [org_ledger]);
   return (
     <>
-      <div className="led__pastLedger">
-        <div className="led__pastLedger__left">
-          <div className="led__pastLedger_logo">
-            <img src={logo} alt="logo" />
-          </div>
-          <div className="led__pastLedger_username">
-            {" "}
-            {connectedAccount?.slice(0, 3) +
-              "...." +
-              connectedAccount?.slice(
-                connectedAccount.length - 4,
-                connectedAccount.length
-              )}
-          </div>
-          <div className="led__pastLedger_animation">
-            <Lottie animationData={Ledge} width={10} height={10} />
-          </div>
-        </div>
-        <Rightcontainer />;
+      <div className="led_pastLedger">
+        <Rightcontainer />
       </div>
-
-      <Footer />
     </>
   );
 };

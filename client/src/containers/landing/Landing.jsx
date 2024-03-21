@@ -22,8 +22,6 @@ const Landing = () => {
             </>
           )
       }
-      <Header />
-      <WhyUs />
     </>
 
   )
