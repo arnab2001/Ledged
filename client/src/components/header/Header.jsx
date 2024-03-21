@@ -19,6 +19,9 @@ const Header = () => {
       console.log(err);
     }
   };
+  const goTo_pastLedger = () => {
+    navigate("/past-ledger");
+  };
   return (
     <>
       {loading && <Loading />}
@@ -45,14 +48,12 @@ const Header = () => {
                 Get Started
                 <img src={Images.rightArrow} />
               </div>
-
-
             </>
           )
             :
             (
               <>
-                <div className="button__styling3" type="button" >
+                <div className="button__styling2" type="button" onClick={goTo_pastLedger}>
                   Past Ledgers
                   <img src={Images.rightArrow} />
                 </div>

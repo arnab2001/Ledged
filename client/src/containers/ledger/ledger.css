@@ -68,7 +68,6 @@
     flex-basis: 100%;
     align-items: center;
     justify-content: center;
-    /* gap: 2rem; */
 }
 .update
 {
@@ -82,7 +81,6 @@
 }
 .button__styling4
 {
-    /* background-color: var(--deep-pink); */
     color: var(--deep-grey);
     border: 0.1px solid var(--grey);
     padding: 8px 16px;
@@ -91,12 +89,15 @@
     display: flex;
     width: 16rem;
     font-family: 'Inter', sans-serif;
-    /* justify-content: space-between; */
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    /* border: none; */
     border-radius: 12px;
+}
+.button__styling4:hover
+{
+    background-color: var(--highlight-black);
+    color: var(--white);
 }
 .preview_key
 {

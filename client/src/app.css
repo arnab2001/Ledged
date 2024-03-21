@@ -8,6 +8,7 @@
     --black: #09090B;
     --deep-grey: #E2E2E2;
     --grey: #434242;
+    --highlight-black: #1e1e1e;
     --white: #FAFAFA;
     --deep-pink: #FF1761;
     --pink: #FF729F;
@@ -34,27 +35,4 @@ body {
 
 .section__margin {
     margin: 1rem 4rem;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-    border-radius: 10px solid blue;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: var(--scroll-color);
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #072D37;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    border-radius: 10px;
-    background: #11819d;
 }

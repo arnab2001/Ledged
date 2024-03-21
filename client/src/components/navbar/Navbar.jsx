@@ -3,6 +3,7 @@ import "./navbar.css";
 import { Images } from "../../assets";
 import { Web3ApiContext } from "../../context/Web3Context";
 import { Link, useNavigate } from "react-router-dom";
+import { LoadingContext } from "../../context/LoadingContext";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -56,8 +57,15 @@ const Navbar = () => {
     setAvatarUrl(randomAvatar);
   }, []);
 
-
-
+  const wallet = async () => {
+    try {
+      setLoading(true);
+      await connectWallet();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  const { loading, setLoading } = useContext(LoadingContext);
 
 
 
@@ -92,11 +100,10 @@ const Navbar = () => {
           </div>
           <div className="led__navbar-links">
             <div className="led__navbar-links_container">
-              <a href="#about">About</a>
               {
                 !connectedAccount ? (
                   <>
-                    <div className="button__styling" type="button">MetaMask
+                    <div className="button__styling" type="button" onClick={wallet}>MetaMask
                       <img src={Images.thumb} alt="user" />
                     </div>
                   </>
@@ -104,10 +111,10 @@ const Navbar = () => {
                 ) :
                   (
                     <>
-                      <div className="button__styling3" type="button" onClick={goTo_pastLedger} >Past Ledgers
+                      <div className="button__styling3" onClick={goTo_pastLedger} >Past Ledgers
                         <img className="svg" src={Images.thumb} alt="user" />
                       </div>
-                      <div className="button__styling3" type="button" onClick={goTo_createLedger} >Create Ledger
+                      <div className="button__styling3" onClick={goTo_createLedger} >Create Ledger
                         <img className="svg" src={Images.thumb} alt="user" />
                       </div>
                     </>
