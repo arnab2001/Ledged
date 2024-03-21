@@ -1,9 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import "./pastLedger.css";
-import logo from "../../assets/user.jpg";
-import Lottie from "lottie-react";
-import Ledge from "../../assets/ledger__animation.json";
-import { Footer } from "../../components";
 import { Web3ApiContext } from "../../context/Web3Context";
 import Rightcontainer from "./Rightcontainer";
 const PastLedger = () => {

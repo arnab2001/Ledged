@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from "react";
-import logo from "../../assets/logo.png";
 import "./navbar.css";
 import { Images } from "../../assets";
 import { Web3ApiContext } from "../../context/Web3Context";
