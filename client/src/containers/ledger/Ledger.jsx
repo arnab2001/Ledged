@@ -224,9 +224,10 @@ const Ledger = () => {
                         </div>
 
                         <div className="preview_value">
-                          {p.value?.length > 20
+                          {/* {p.value?.length > 20
                             ? p.value?.slice(0, 6) + "..."
-                            : p.value}
+                            : p.value} */}
+                          {p.value}
                         </div>
 
 

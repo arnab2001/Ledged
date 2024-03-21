@@ -7,7 +7,7 @@ import marker from "./Marker.svg"
 import bullet from "./Bullets.svg"
 import background from "./Background.svg"
 import loading from "./Loading.svg"
-import texteditor from './Texteditor.svg'
+import texteditor from './TextEditor.svg'
 import arrowup from './ArrowUp.svg'
 import deleteIcon from './Delete.svg'
 export const Images = {
