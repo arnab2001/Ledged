@@ -23,6 +23,7 @@
 }
 
 body {
+    background: var(--black);
     background: url('./assets/Background.svg');
     color: var(--white);
 }
