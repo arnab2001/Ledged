@@ -19,8 +19,8 @@ const Navbar = () => {
 
   const { connectWallet, connectedAccount, checkIfWalletIsConnected, Get_ledgerdata } =
     useContext(Web3ApiContext);
-  console.log(connectedAccount);
-  console.log(connectWallet);
+
+
   const changeBackground = () => {
     if (window.scrollY >= 100) {
       setNavbar(true);
@@ -59,9 +59,10 @@ const Navbar = () => {
 
   const wallet = async () => {
     try {
-      setLoading(true);
       await connectWallet();
+      setLoading(true);
     } catch (err) {
+      alert("Error connecting wallet, Please Install Metamask");
       console.log(err);
     }
   };

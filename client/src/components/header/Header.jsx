@@ -13,9 +13,10 @@ const Header = () => {
   const { loading, setLoading } = useContext(LoadingContext);
   const wallet = async () => {
     try {
-      setLoading(true);
       await connectWallet();
+      setLoading(true);
     } catch (err) {
+      alert("Error connecting wallet, Please Install Metamask");
       console.log(err);
     }
   };
