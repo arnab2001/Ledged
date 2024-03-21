@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Navbar, Header, LedNav, WhyUs, Footer, Loading } from '../../components'
+import { Header, WhyUs, Loading } from '../../components'
 import { LoadingContext } from '../../context/LoadingContext';
 
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import './whyUs.css'
 import { Images } from '../../assets'
+import features from '../../assets/features.json'
 const WhyUs = () => {
     return (
         <>

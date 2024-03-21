@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "SECURITY & IMMUTABILITY",
+    "description": "Security and immutability are crucial aspects of data management in modern systems. Security ensures that data is protected from unauthorized access, tampering, or breaches, while immutability guarantees that once data is written, it cannot be altered or deleted."
+  },
+  {
+    "id": 2,
+    "title": "USER CUSTOMIZABLE LEDGERS",
+    "description": "User-customizable ledgers empower users to tailor their ledger systems to suit their specific needs and preferences. This flexibility allows users to define custom fields, workflows, and validation rules, enabling them to efficiently manage and track various types of data and transactions."
+  },
+  {
+    "id": 3,
+    "title": "LOGIN & AUTHENTICATION",
+    "description": "Login and authentication mechanisms provide secure access to digital resources and services by verifying the identity of users. Through authentication, users prove their identity using credentials such as usernames and passwords, biometric data, or security tokens, ensuring only authorized individuals can access sensitive information or perform specific actions."
+  }
+]
